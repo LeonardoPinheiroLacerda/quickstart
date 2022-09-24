@@ -17,7 +17,7 @@ describe("Databases", () => {
 		prodDatabase.destroy()
 	})
 
-	it("Should query testDatabase", async () => {
+	it("Should query logDatabase", async () => {
 		const value = await testDatabase.raw("select 1")
 		expect(value.rowCount).toBe(1)
 
