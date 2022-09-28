@@ -1,13 +1,13 @@
-import knex from "knex"
+import knex from 'knex'
 
 const database = knex({
-	client: "pg",
+	client: 'pg',
 	connection: {
-		host: "127.0.0.1",
+		host: '127.0.0.1',
 		port: 5432,
-		user: "quickstart",
-		password: "quickstart",
-		database: "quickstart",
+		user: 'quickstart',
+		password: 'quickstart',
+		database: 'quickstart',
 	},
 })
 
