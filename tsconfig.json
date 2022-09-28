@@ -2,7 +2,9 @@
 	"compilerOptions": {
 		"esModuleInterop": true,
 		"allowJs": true,
-		"rootDir": "src",
+		"rootDirs": [
+			"src"
+		],
 		"outDir": "dist"
 	}
 }

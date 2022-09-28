@@ -12,3 +12,8 @@ CREATE USER quickstart_test
     WITH 
     PASSWORD 'quickstart_test' 
     CREATEDB;
+
+CREATE USER quickstart_log_test 
+    WITH 
+    PASSWORD 'quickstart_log_test' 
+    CREATEDB;

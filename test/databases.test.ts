@@ -1,5 +1,6 @@
 import logDatabase from "../src/databases/LogDatabase"
-import prodDatabase from "../src/databases/ProductionDatabase"
+import database from "../src/databases/Database"
+import testLogDatabase from "../src/databases/TestLogDatabase"
 import testDatabase from "../src/databases/TestDatabase"
 
 describe("Databases", () => {
@@ -10,17 +11,24 @@ describe("Databases", () => {
 		logDatabase.destroy()
 	})
 
-	it("Should query productionDatabase", async () => {
-		const value = await prodDatabase.raw("select 1")
+	it("Should query database", async () => {
+		const value = await database.raw("select 1")
 		expect(value.rowCount).toBe(1)
 
-		prodDatabase.destroy()
+		database.destroy()
 	})
 
-	it("Should query logDatabase", async () => {
+	it("Should query testDatabase", async () => {
 		const value = await testDatabase.raw("select 1")
 		expect(value.rowCount).toBe(1)
 
 		testDatabase.destroy()
+	})
+
+	it("Should query testLogDatabase", async () => {
+		const value = await testLogDatabase.raw("select 1")
+		expect(value.rowCount).toBe(1)
+
+		testLogDatabase.destroy()
 	})
 })
